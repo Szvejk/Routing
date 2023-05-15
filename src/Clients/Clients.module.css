@@ -1,0 +1,10 @@
+.linksClients {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.linkClient {
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
+}

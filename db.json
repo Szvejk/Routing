@@ -1,0 +1,75 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "surname": "test",
+      "street": "33"
+    },
+    {
+      "name": "sasaaaa@.pl",
+      "surname": "sasaaa",
+      "street": "sasaaa",
+      "id": 2
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaa",
+      "street": "aaaaaaaaa",
+      "id": 3
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaa",
+      "street": "aaaaaaaaa",
+      "id": 4
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaa",
+      "street": "aaaaaaaaa",
+      "id": 5
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaa",
+      "street": "aaaaaaaaa",
+      "id": 6
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaa",
+      "street": "aaaaaaaaa",
+      "id": 7
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaa",
+      "street": "aaaaaaaaa",
+      "id": 8
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaa",
+      "street": "aaaaaaaaa",
+      "id": 9
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaa",
+      "street": "aaaaaaaaa",
+      "id": 10
+    },
+    {
+      "name": "aaaaaa",
+      "surname": "aaaaaaaaaa",
+      "street": "aaaaaaaaa",
+      "id": 11
+    }
+  ],
+  "orders": [
+    {
+      "name": "str@.pl"
+    }
+  ]
+}

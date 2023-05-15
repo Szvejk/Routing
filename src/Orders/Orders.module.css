@@ -1,0 +1,4 @@
+.linksOrders{
+    display: flex;
+    flex-direction: column;
+}

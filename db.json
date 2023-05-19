@@ -1,75 +1,84 @@
 {
   "clients": [
     {
-      "id": 1,
-      "name": "json-server",
-      "surname": "test",
-      "street": "33"
-    },
-    {
-      "name": "sasaaaa@.pl",
-      "surname": "sasaaa",
-      "street": "sasaaa",
-      "id": 2
-    },
-    {
       "name": "aaaaaa",
       "surname": "aaaaaaaaaa",
       "street": "aaaaaaaaa",
-      "id": 3
-    },
-    {
-      "name": "aaaaaa",
-      "surname": "aaaaaaaaaa",
-      "street": "aaaaaaaaa",
-      "id": 4
-    },
-    {
-      "name": "aaaaaa",
-      "surname": "aaaaaaaaaa",
-      "street": "aaaaaaaaa",
-      "id": 5
-    },
-    {
-      "name": "aaaaaa",
-      "surname": "aaaaaaaaaa",
-      "street": "aaaaaaaaa",
+      "phone": "12333",
       "id": 6
     },
     {
       "name": "aaaaaa",
       "surname": "aaaaaaaaaa",
       "street": "aaaaaaaaa",
-      "id": 7
-    },
-    {
-      "name": "aaaaaa",
-      "surname": "aaaaaaaaaa",
-      "street": "aaaaaaaaa",
+      "phone": "1231",
       "id": 8
     },
     {
       "name": "aaaaaa",
       "surname": "aaaaaaaaaa",
       "street": "aaaaaaaaa",
-      "id": 9
-    },
-    {
-      "name": "aaaaaa",
-      "surname": "aaaaaaaaaa",
-      "street": "aaaaaaaaa",
+      "phone": "1233",
       "id": 10
     },
     {
       "name": "aaaaaa",
       "surname": "aaaaaaaaaa",
       "street": "aaaaaaaaa",
+      "phone": "1234",
       "id": 11
+    },
+    {
+      "name": "ssssss",
+      "surname": "sssssss",
+      "street": "sssssssss",
+      "phone": " 333333",
+      "id": 12
+    },
+    {
+      "name": "ssssss",
+      "surname": "sssssss",
+      "street": "sssssssss",
+      "phone": " 333333",
+      "id": 13
     }
   ],
   "orders": [
     {
+      "id": 1,
       "name": "str@.pl"
+    },
+    {
+      "name": "sssssssss",
+      "quantity": "55",
+      "title": "sssssss",
+      "content": "ssssssssssssss",
+      "phone": "",
+      "id": 2
+    },
+    {
+      "name": "sssssssss",
+      "quantity": "55",
+      "title": "sssssss",
+      "content": "ssssssssssssss",
+      "phone": "",
+      "id": 3
+    },
+    {
+      "name": "sssssssss",
+      "quantity": "55",
+      "title": "sssssss",
+      "content": "ssssssssssssss",
+      "phone": "",
+      "id": 4
+    },
+    {
+      "name": "sssssssss",
+      "quantity": "55",
+      "title": "sssssss",
+      "content": "ssssssssssssss",
+      "phone": "",
+      "id": 5
     }
   ]
 }

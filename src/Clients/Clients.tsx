@@ -2,6 +2,7 @@ import React, {useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Clients.module.css';
 import ClientForm from '../ClientForm';
+import ShowClient from './ShowClient';
 
 const getAllClients=async ()=>{
 	  const response = await fetch(`http://localhost:3000/clients`, {
@@ -9,6 +10,7 @@ const getAllClients=async ()=>{
     });
 	const data=await response.json()
 	return data;
+	// data.onClick={ <ShowClient />}> 
 }
 
 const Clients = () => {
@@ -21,7 +23,7 @@ const Clients = () => {
 		})
 	}, [])
 
-	console.log("data",data)
+	
 	
 
 	return ( 
@@ -33,21 +35,15 @@ const Clients = () => {
 			<Link to='/clients/add' className={styles.linkClient}>
 				Client add
 			</Link>
-			<Link to='/clients/:id' className={styles.linkClient}>
-				Client id
-			</Link>
-			<Link to='/clients/:id/edit' className={styles.linkClient}>
-				Client id edit
-			</Link>
 		</div>
 		<div>
 			All clients:
 			
 			{data.map((el)=>{
-				return <div key={el.id}>
+				return <Link to={`/clients/${el.id}`} key={el.id}>
 				<p>{el.name}</p>
 				<p>{el.street}</p>
-				</div>
+				</Link>
 			})}
 		</div>
 		</>

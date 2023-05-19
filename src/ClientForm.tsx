@@ -1,7 +1,7 @@
 import React from 'react';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const clientsSchema = yup.object().shape({
 	name: yup
@@ -16,6 +16,8 @@ export const clientsSchema = yup.object().shape({
 		.string()
 		.min(5, 'Please enter min 3 characters')
 		.required('required'),
+	phone: yup.string(),
+
 
 	// postalCode: yup
 	// 	.string()
@@ -30,19 +32,18 @@ export const clientsSchema = yup.object().shape({
 });
 type FormValues = yup.InferType<typeof clientsSchema>;
 
-
-export const addClient=async (newClient:FormValues)=>{
-    const response = await fetch(`http://localhost:3000/clients`, {
-      method: "POST",
-       headers: {"Content-type": "application/json;charset=UTF-8"},
-      body: JSON.stringify(newClient),
-    });
-    if (!response.ok) {
-      return {};
-    }
-    const data = await response.json();
-    return data;
-}
+export const addClient = async (newClient: FormValues) => {
+	const response = await fetch(`http://localhost:3000/clients`, {
+		method: 'POST',
+		headers: { 'Content-type': 'application/json;charset=UTF-8' },
+		body: JSON.stringify(newClient),
+	});
+	if (!response.ok) {
+		return {};
+	}
+	const data = await response.json();
+	return data;
+};
 
 const ClientForm = () => {
 	const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
@@ -51,10 +52,11 @@ const ClientForm = () => {
 				name: '',
 				surname: '',
 				street: '',
+				phone: " ",
 			},
 			validationSchema: clientsSchema,
-			onSubmit: async(values: FormValues) => {
-				await addClient(values)
+			onSubmit: async (values: FormValues) => {
+				await addClient(values);
 			},
 		});
 	return (
@@ -93,6 +95,17 @@ const ClientForm = () => {
 					className={errors.street && touched.street ? 'input-error' : ''}
 				/>{' '}
 				{errors.street && touched.street && <p>{errors.street}</p>}
+				<label htmlFor='street'>Phone</label>
+				<input
+					value={values.phone}
+					onChange={handleChange}
+					id='phone'
+					type='phone'
+					placeholder='Enter your phone'
+					onBlur={handleBlur}
+					className={errors.phone && touched.phone ? 'input-error' : ''}
+				/>{' '}
+				{errors.street && touched.street && <p>{errors.phone}</p>}
 				{/* <label htmlFor='password'> Password</label>
 				<input
 					value={values.confirmPassword}

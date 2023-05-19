@@ -3,29 +3,24 @@ import {useState, useEffect} from 'react'
 import {   Link } from 'react-router-dom';
 import styles from './Orders.module.css'
 
-const Orders = () => {
-const [data,setData]=useState<any[]>([])
-const addOrder = async (id:any) => {
-	const response = await fetch(`http://localhost:3000/orders${id}`, {
+
+
+const addOrder = async () => {
+	const response = await fetch(`http://localhost:3000/orders`, {
 		method: 'GET',
-		headers: { 'Content-type': 'application/json;charset=UTF-8' },
-		body: JSON.stringify(),
+		
 	});
-	if (!response.ok) {
-		return {};
-	}
-	const data = await response.json();
+	const data=await response.json()
 	return data;
 };
 
-
+const Orders = () => {
+const [data,setData]=useState<any[]>([])
 	useEffect(() => {
 		addOrder().then(data=>{
 			setData(data)
 		})
 	}, [])
-
-
 
 
   return (
@@ -41,6 +36,8 @@ const addOrder = async (id:any) => {
 				return <Link to={`/orders/${el.id}`} key={el.id}>
 				<p>{el.phone}</p>
 				<p>{el.quantity}</p>
+				<p>{el.name}</p>
+				<p>{el.title}</p>
 				</Link>
 			})}
 </>

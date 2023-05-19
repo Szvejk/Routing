@@ -10,7 +10,7 @@ const getAllClients=async ()=>{
     });
 	const data=await response.json()
 	return data;
-	// data.onClick={ <ShowClient />}> 
+
 }
 
 const Clients = () => {

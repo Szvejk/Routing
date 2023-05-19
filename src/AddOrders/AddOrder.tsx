@@ -70,7 +70,7 @@ const ClientForm = () => {
 	return (
 		<div>
 			<form onSubmit={handleSubmit} autoComplete='off'>
-				'<label htmlFor='name'>Name</label>
+				<label htmlFor='name'>Name</label>
 				<input
 					onChange={handleChange}
 					id='name'
@@ -78,7 +78,7 @@ const ClientForm = () => {
 					placeholder='Enter your name'
 					onBlur={handleBlur}
 				/>{' '}
-				'<label htmlFor='phone'>phone</label>
+				<label htmlFor='phone'>phone</label>
 				<select
 					name='phone'
 					value={values.phone}

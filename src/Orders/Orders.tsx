@@ -38,6 +38,7 @@ const [data,setData]=useState<any[]>([])
 				<p>{el.quantity}</p>
 				<p>{el.name}</p>
 				<p>{el.title}</p>
+			
 				</Link>
 			})}
 </>

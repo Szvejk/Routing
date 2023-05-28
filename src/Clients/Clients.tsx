@@ -35,6 +35,9 @@ const Clients = () => {
 			<Link to='/clients/add' className={styles.linkClient}>
 				Client add
 			</Link>
+			<Link to='/register' className={styles.linkClient}>
+			FakeRegisterComponent
+			</Link>
 		</div>
 		<div>
 			All clients:

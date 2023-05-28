@@ -34,6 +34,7 @@ const [data,setData]=useState<any[]>([])
     </div>
 	{data.map((el)=>{
 				return <Link to={`/orders/${el.id}`} key={el.id}>
+					<button>Details</button>
 				<p>{el.phone}</p>
 				<p>{el.quantity}</p>
 				<p>{el.name}</p>

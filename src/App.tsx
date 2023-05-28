@@ -10,6 +10,7 @@ import Orders from './Orders/Orders';
 import IdOrders from './IdOrders/IdOrders';
 import AddOrder from './AddOrders/AddOrder';
 import Invoices from './Invoices/Invoices';
+import FakeRegisterComponent from './FakeRegisterComponent/FakeRegisterComponent';
 const App = () => {
 	return (
 		<>
@@ -26,6 +27,7 @@ const App = () => {
 					<Route path='/orders/:id' element={<IdOrders />} />
 					<Route path='/orders/add' element={<AddOrder />} />
 					<Route path='/invoices' element={<Invoices />} />
+					<Route path='/register' element={<FakeRegisterComponent />}/>
 
 					<Route path='*' element={<h1>Page not found</h1>} />
 				</Routes>

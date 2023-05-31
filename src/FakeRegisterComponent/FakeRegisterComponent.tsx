@@ -8,33 +8,28 @@ type FormValues = {
 	email: string;
 	password: string;
 	repeatPassword: string;
-
-};
-
-const onSubmit = async (values:string, actions:string) => {
-	await new Promise((resolve) => setTimeout(resolve, 1000))
-    actions.resetForm()
+	error: string;
 };
 
 const FakeRegisterComponent = () => {
-	const { values, touched, errors,isSubmitting, handleBlur, handleChange, handleSubmit } =
-		useFormik<FormValues>({
-			initialValues: {
-				name: '',
-				email: '',
-				password: '',
-				repeatPassword: '',
-			},
-			validationSchema: basicSchema,
-			onSubmit: (values: FormValues) => {
-				alert(JSON.stringify(values));
-			},
-		});
-
+	// const { values, touched, errors,isSubmitting, handleBlur, handleChange, handleSubmit } =
+	// 	useFormik<FormValues>({
+	// 		initialValues: {
+	// 			name: '',
+	// 			email: '',
+	// 			password: '',
+	// 			repeatPassword: '',
+	// 			error: ''
+	// 		},
+	// 		validationSchema: basicSchema,
+	// 		onSubmit: (values: FormValues) => {
+	// 			alert(JSON.stringify(values));
+	// 		},
+	// 	});
 
 	return (
 		<div>
-			<form onSubmit={handleSubmit} autoComplete='off'>
+			{/* <form onSubmit={handleSubmit} autoComplete='off'>
 				<label htmlFor='name'>Name</label>
 				<input
 					value={values.name}
@@ -97,9 +92,9 @@ const FakeRegisterComponent = () => {
 				/>
 				{errors.name && touched.name && (
 					<p className={styles.error}>{errors.name}</p>
-				)}
-				<button disabled={isSubmitting} type='submit'>Submit</button>
-			</form>
+				)} */}
+			{/* <button disabled={isSubmitting} type='submit'>Submit</button>
+			</form> */}
 		</div>
 	);
 };

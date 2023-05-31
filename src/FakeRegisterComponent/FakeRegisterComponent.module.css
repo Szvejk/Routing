@@ -1,0 +1,9 @@
+.inputError {
+	border-color: red;
+}
+button:disabled {
+	opacity: 0.35;
+}
+.error {
+	color: red;
+}
